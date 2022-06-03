@@ -72,9 +72,11 @@
                 color: #000000;
                 position: relative;
                 z-index: 2;
+                pointer-events: none;
             }
 
-            span {
+            &::after {
+                content: "";
                 width: 0%;
                 height: 3px;
                 position: absolute;
@@ -84,7 +86,7 @@
                 transition: all .3s ease-in-out;
             }
 
-            &:hover span {
+            &:hover::after {
                 width: 100%;
             }
 
@@ -92,25 +94,34 @@
                 display: none;
                 position: fixed;
                 left: 0;
-                top: 159px;
                 width: 100vw;
                 background-color: rgb(255, 255, 255);
                 padding: 1rem;
+                transition: all .5s ease-in-out;
                 animation: dropdown .3s linear;
                 z-index: 1;
+                cursor: default;
+
+                &:hover {
+                    display: block;
+                }
 
                 p {
                     line-height: 32px;
                 }
+
+                &.active {
+                    display: block;
+                }
+
+                & >* {
+                    pointer-events: none;
+                }
             }
 
-            .content.active {
-                display: block;
-            }
-
-            .content >* {
-                pointer-events: none;
-            }
+            .content.anim {
+                transition: all .5s ease-in-out;
+            } 
 
             @keyframes dropdown {
                 0% {

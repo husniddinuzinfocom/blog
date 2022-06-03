@@ -88,9 +88,11 @@
   color: #000000;
   position: relative;
   z-index: 2;
+  pointer-events: none;
 }
 
-.nav__row li span {
+.nav__row li::after {
+  content: "";
   width: 0%;
   height: 3px;
   position: absolute;
@@ -101,7 +103,7 @@
   transition: all .3s ease-in-out;
 }
 
-.nav__row li:hover span {
+.nav__row li:hover::after {
   width: 100%;
 }
 
@@ -109,13 +111,19 @@
   display: none;
   position: fixed;
   left: 0;
-  top: 159px;
   width: 100vw;
   background-color: white;
   padding: 1rem;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   -webkit-animation: dropdown .3s linear;
           animation: dropdown .3s linear;
   z-index: 1;
+  cursor: default;
+}
+
+.nav__row li .content:hover {
+  display: block;
 }
 
 .nav__row li .content p {
@@ -128,6 +136,11 @@
 
 .nav__row li .content > * {
   pointer-events: none;
+}
+
+.nav__row li .content.anim {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 @-webkit-keyframes dropdown {
