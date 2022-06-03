@@ -1,33 +1,24 @@
-const li = document.querySelectorAll(".nav__row > li");
 const a = document.querySelectorAll(".nav__row > li > a");
 
-if (li) {
-    for (let x of li) {
+if (a) {
+    for (let x of a) {
         x.addEventListener("mouseover", (e) => {
-            if (e.target.querySelector(".content")) {
-                e.target.querySelector(".content").classList.add("active");
-                e.target.querySelector(".content").style.top = x.getBoundingClientRect().bottom + "px";
+            if (e.target.nextElementSibling) {
+                e.target.nextElementSibling.classList.add("active");
+                e.target.nextElementSibling.style.top = x.getBoundingClientRect().bottom + "px";
             }
         });
         x.addEventListener("mouseout", (e) => {
-            if (e.target.querySelector(".content")) {
-                e.target.querySelector(".content").classList.add("anim");
-                setTimeout(() => {
-                    e.target.querySelector(".content").classList.remove("anim")
-                    e.target.querySelector(".content").classList.remove("active");
-                }, 600);
+            if (e.target.nextElementSibling) {
+                e.target.nextElementSibling.classList.remove("active");
             }
         });
-        x.querySelector(".content").addEventListener("mouseover", (e) => {
+        x.nextElementSibling.addEventListener("mouseover", (e) => {
             e.target.classList.add("active");
             e.target.classList.remove("anim");
         });
-        x.querySelector(".content").addEventListener("mouseout", (e) => {
-            e.target.classList.add("anim");
-            setTimeout(() => {
-                e.target.classList.remove("anim");
-                e.target.classList.remove("active");
-            }, 500);
+        x.nextElementSibling.addEventListener("mouseout", (e) => {
+            e.target.classList.remove("active");
         });
     }
 }
