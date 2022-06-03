@@ -15,12 +15,12 @@ if (li) {
                 setTimeout(() => {
                     e.target.querySelector(".content").classList.remove("anim")
                     e.target.querySelector(".content").classList.remove("active");
-                }, 500);
+                }, 600);
             }
         });
         x.querySelector(".content").addEventListener("mouseover", (e) => {
             e.target.classList.add("active");
-            e.target.classList.add("anim");
+            e.target.classList.remove("anim");
         });
         x.querySelector(".content").addEventListener("mouseout", (e) => {
             e.target.classList.add("anim");
