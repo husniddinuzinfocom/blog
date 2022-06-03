@@ -76,6 +76,10 @@
   background-color: #fff;
 }
 
+.nav__row li:hover > a::after {
+  width: 100%;
+}
+
 .nav__row li a {
   text-decoration: none;
   font-family: 'Inter';
@@ -103,6 +107,11 @@
 
 .nav__row li a:hover::after {
   width: 100%;
+}
+
+.nav__row li a:hover + .content {
+  visibility: visible;
+  opacity: 1;
 }
 
 .nav__row li .content {
