@@ -88,7 +88,10 @@
   color: #000000;
   position: relative;
   z-index: 2;
-  pointer-events: none;
+}
+
+.nav__row li a:hover + .content {
+  display: block;
 }
 
 .nav__row li::after {
