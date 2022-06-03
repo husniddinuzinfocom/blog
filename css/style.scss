@@ -76,6 +76,7 @@
 
             a:hover + .content {
                 display: block;
+                opacity: 1;
             }
 
             &::after {
@@ -107,6 +108,7 @@
 
                 &:hover {
                     display: block;
+                    opacity: 1;
                 }
 
                 p {
@@ -124,6 +126,7 @@
 
             .content.anim {
                 transition: all .5s ease-in-out;
+                opacity: .7;
             } 
 
             @keyframes dropdown {

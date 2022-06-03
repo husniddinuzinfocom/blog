@@ -20,6 +20,7 @@ if (li) {
         });
         x.querySelector(".content").addEventListener("mouseover", (e) => {
             e.target.classList.add("active");
+            e.target.classList.add("anim");
         });
         x.querySelector(".content").addEventListener("mouseout", (e) => {
             e.target.classList.add("anim");

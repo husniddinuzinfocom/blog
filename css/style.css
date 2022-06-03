@@ -92,6 +92,7 @@
 
 .nav__row li a:hover + .content {
   display: block;
+  opacity: 1;
 }
 
 .nav__row li::after {
@@ -127,6 +128,7 @@
 
 .nav__row li .content:hover {
   display: block;
+  opacity: 1;
 }
 
 .nav__row li .content p {
@@ -144,6 +146,7 @@
 .nav__row li .content.anim {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  opacity: .7;
 }
 
 @-webkit-keyframes dropdown {
