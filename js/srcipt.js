@@ -5,7 +5,6 @@ if (a) {
         x.addEventListener("mouseover", (e) => {
             if (e.target.nextElementSibling) {
                 e.target.nextElementSibling.classList.add("active");
-                e.target.nextElementSibling.style.top = x.getBoundingClientRect().bottom + "px";
             }
         });
         x.addEventListener("mouseout", (e) => {
