@@ -60,12 +60,6 @@
             z-index: 9;
             background-color: #fff;
 
-    //         @media (max-width: 1340px) {
-    //             & {
-    //                 line-height: 20px;
-    //             }
-    // }
-
             a {
                 text-decoration: none;
                 font-family: 'Inter';
@@ -98,7 +92,7 @@
                 visibility: hidden;
                 position: absolute;
                 left: 0;
-                width: 100vw;
+                width: 100%;
                 background-color: rgb(255, 255, 255);
                 padding: 1rem;
                 transition: all .3s ease-in-out;

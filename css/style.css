@@ -109,7 +109,7 @@
   visibility: hidden;
   position: absolute;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   padding: 1rem;
   -webkit-transition: all .3s ease-in-out;
