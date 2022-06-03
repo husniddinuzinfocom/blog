@@ -111,12 +111,16 @@
   left: 0;
   top: 159px;
   width: 100vw;
-  height: 264px;
+  min-height: 264px;
   background-color: white;
   padding: 1rem;
   -webkit-animation: dropdown .3s linear;
           animation: dropdown .3s linear;
   z-index: 1;
+}
+
+.nav__row li .content p {
+  line-height: 32px;
 }
 
 .nav__row li .content.active {
@@ -147,7 +151,7 @@
 
 .main {
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 165px);
 }
 
 .main > img {

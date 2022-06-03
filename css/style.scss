@@ -94,11 +94,15 @@
                 left: 0;
                 top: 159px;
                 width: 100vw;
-                height: 264px;
+                min-height: 264px;
                 background-color: rgb(255, 255, 255);
                 padding: 1rem;
                 animation: dropdown .3s linear;
                 z-index: 1;
+
+                p {
+                    line-height: 32px;
+                }
             }
 
             .content.active {
@@ -123,7 +127,7 @@
 
 .main {
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 165px);
 
     & > img {
         width: 100%;
