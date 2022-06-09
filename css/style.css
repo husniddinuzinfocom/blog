@@ -45,6 +45,7 @@ body {
 @media (max-width: 480px) {
   .header .title__text {
     font-size: 15px;
+    margin-left: 1rem;
   }
 }
 
