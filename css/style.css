@@ -38,6 +38,16 @@ body {
   border: 2px solid #000;
 }
 
+.header .title__text {
+  font-size: 28px;
+}
+
+@media (max-width: 480px) {
+  .header .title__text {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 1024px) {
   .main .col-md-6 ~ .col-md-3 {
     -webkit-box-ordinal-group: 2;
@@ -209,8 +219,21 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  .footer__title h3 {
+    text-align: left;
+  }
+}
+
 .footer__description {
   text-align: right;
+}
+
+@media (max-width: 480px) {
+  .footer__description {
+    text-align: left;
+    margin-top: 1rem;
+  }
 }
 
 .footer__description p {
@@ -437,5 +460,21 @@ body {
 
 .books__item__link a:hover {
   background-color: #FF5A60BF;
+}
+
+@media (max-width: 560px) {
+  .books {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .books__item {
+    -ms-flex-preferred-size: 95% !important;
+        flex-basis: 95% !important;
+    width: 95% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
