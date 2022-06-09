@@ -95,6 +95,12 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .main .blogs__item {
+    padding: 2rem 1rem;
+  }
+}
+
 .main .blogs__item__title h3 {
   font-size: 30px;
   font-family: sans-serif;
@@ -102,9 +108,21 @@ body {
   font-size: 400;
 }
 
+@media (max-width: 480px) {
+  .main .blogs__item__title h3 {
+    font-size: 20px;
+  }
+}
+
 .main .blogs__item__description p {
   font-size: 20px;
   line-height: 30px;
+}
+
+@media (max-width: 480px) {
+  .main .blogs__item__description p {
+    font-size: 17px;
+  }
 }
 
 .main .blogs__item__description a {

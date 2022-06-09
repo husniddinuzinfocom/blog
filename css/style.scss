@@ -91,6 +91,10 @@ body {
                 padding: 2rem 3rem;
             }
 
+            @media (max-width: 480px) {
+                padding: 2rem 1rem;
+            }
+
             &__title {
                 h3 {
                     font-size: 30px;
@@ -98,12 +102,24 @@ body {
                     margin-bottom: 1rem;
                     font-size: 400;
                 }
+
+                @media (max-width: 480px) {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
             }
 
             &__description {
                 p {
                     font-size: 20px;
                     line-height: 30px;
+                }
+
+                @media (max-width: 480px) {
+                    p {
+                        font-size: 17px;
+                    }
                 }
 
                 a {
