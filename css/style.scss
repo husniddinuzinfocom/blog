@@ -498,3 +498,53 @@ body {
         }
     }
 }
+
+.aboutme {
+    margin-top: 7px;
+    &__title {
+        margin-bottom: 1rem;
+        h2 {
+            font-family: sans-serif;
+        }
+    }
+
+    .df {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 480px) {
+        &__title {
+            padding-left: 1rem;
+        }
+        .df {
+            flex-flow: column nowrap !important;
+        }
+        &__img {
+            order: -1;
+        }
+        &__description {
+            padding: 1rem !important;
+        }
+        .mt {
+            margin-top: 0 !important;
+            padding: 0 1rem !important;
+        }
+    }
+
+    &__description {
+        padding-right: 2rem;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__img {
+        flex-basis: 30%;
+    }
+
+    .mt {
+        margin-top: 1rem;
+    }
+}
