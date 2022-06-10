@@ -23,7 +23,7 @@ body {
     height: 64px;
     position: relative;
     z-index: 9;
-    margin-top: px;
+    margin-top: 7px;
 }
 
 .logo img {
@@ -50,6 +50,10 @@ body {
     font-family: "jost", sans-serif;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.75);
+}
+
+.navbar ul li a.active {
+    color: #fb2b2b;
 }
 
 .navbar ul li a:hover {
@@ -265,7 +269,6 @@ body {
     width: 30px;
     height: 25px;
     margin-top: calc((64px - 25px) / 2);
-    margin-left: -12px;
     overflow: hidden;
     display: none;
     position: relative;
@@ -303,6 +306,187 @@ body {
     transform: translateX(-3.5px) translateY(11px) rotateZ(45deg);
 }
 
+.detail {
+    padding: 24px 0;
+}
+
+.detail-text-content {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.detail-text-content a{
+    color: rgba(0, 0, 0, 0.45);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.detail-text-content h2 {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 42px;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.detail-img-content {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.detail-img-content > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.detail-description {
+    background-color: #fff;
+    padding: 48px;
+}
+
+.detail-description-text {
+    padding: 0 48px;
+}
+
+.detail-description-text p {
+    font-size: 20px;
+    line-height: 32.64px;
+    color: rgb(55, 55, 55);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.detail-description-text p:last-child {
+    margin-bottom: 0;
+}
+
+.mail-send-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.mail-send-form h4 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    word-wrap: break-word;
+    font-family: "jost", sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.mail-send-form > input {
+    border: 2px solid #c3c3c3;
+    padding: 12px 1rem;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.mail-send-form > button {
+    margin-top: 1rem;
+    display: block;
+    padding: 12px 1rem;
+    border-radius: 2rem;
+    outline: none;
+    margin-right: auto;
+    cursor: pointer;
+    background-color: #fb2b2b;
+    color: #fff;
+    border: 0px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+
+.tag a {
+    display: inline-block;
+    margin: 0 1rem 1rem 0;
+    text-decoration: none;
+    border: 1px solid rgb(238, 238, 238);
+    font-size: 15px;
+    padding: 8px 12px;
+    transition: all 3.s ease-in-out;
+}
+
+.tag a:hover {
+    color: #fb2b2b;
+}
+
+.similar-posts {
+    padding: 4rem;
+    background-color: #fff;
+}
+
+.similar-title h2 {
+    font-size: 16px;
+    color: #000000cc;
+}
+
+.comment {
+    padding: 3rem 0;
+}
+
+.comment-title {
+    text-align: left;
+}
+
+.comment-title h3 {
+    font-size: 16px;
+    color: #000000cc;
+    margin-bottom: 1rem;
+}
+
+.comment-form form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow:column nowrap;
+}
+
+.comment-form form textarea,
+.comment-form form input {
+    width: 100%;
+    outline: none;
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    padding: 12px 1rem;
+}
+
+.comment-form form label {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+.comment-form form button {
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background-color: rgb(251, 43, 43);
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 14px;
+    border: 2px solid rgb(251, 43, 43);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.comment-form form button:hover {
+    color: rgb(251, 43, 43);
+    background-color: #fff;
+}
+
 @media (max-width: 540px) {
     .full-img {
         padding-bottom: 1rem;
@@ -312,7 +496,25 @@ body {
     .post-title a {
         font-size: 17px;
     }
-
+    .detail {
+        padding: 0;
+    }
+    .detail-text-content h2 {
+        font-size: 30px;
+    }
+    .detail-text-content a{
+        font-size: 15px;
+    }
+    .detail-img-content {
+        height: auto;
+    }
+    .detail-description-text p {
+        font-size: 18px;
+    }
+    .detail-description-text {
+        padding: 0 16px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -373,5 +575,23 @@ body {
     .post-title a {
         font-size: 19px;
         font-weight: 500;
+    }
+    .detail-description {
+        padding: 48px 0;
+    }
+    .mail-send-form {
+        margin-top: 1rem;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .mail-send-form > button {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    .mail-send-form > input {
+        max-width: 350px;
+    }
+    .similar-posts {
+        padding: 4rem 0;
     }
 }
