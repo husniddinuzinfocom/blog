@@ -49,29 +49,15 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
-  .main .col-md-6 ~ .col-md-3 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .main .col-md-6 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
 .main .navbar {
-  background-color: #c3c3c3;
   margin-top: 6px;
-  border: 2px solid #000;
-  height: 242px;
 }
 
 .main .navbar__list {
   list-style: none;
   padding: 1rem;
+  background-color: #c3c3c3;
+  border: 2px solid #000;
 }
 
 .main .navbar__list li {
@@ -82,6 +68,55 @@ body {
   text-decoration: none;
   font-size: 18px;
   display: block;
+  color: #000;
+}
+
+.main .navbar__list li a.active {
+  color: red;
+}
+
+.main .navbar .icon__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 1rem;
+}
+
+.main .navbar .icon__content .icon {
+  margin-right: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.main .navbar .icon__content .icon:hover {
+  background-color: #000;
+}
+
+.main .navbar .icon__content .icon:hover i {
+  color: #fff;
+}
+
+.main .navbar .icon__content .icon i {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.main .navbar .icon__content .icon a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 52px;
   color: #000;
 }
 
@@ -131,6 +166,12 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .main .myself-card {
+    margin-bottom: 2rem;
+  }
+}
+
 .main .myself-card .card {
   padding: 1rem 2rem;
   background-color: #c3c3c3;
@@ -162,6 +203,50 @@ body {
 
 .main .myself-card .card__link a {
   text-decoration: none;
+}
+
+.main .myself-card .tags {
+  margin-top: 2rem;
+}
+
+.main .myself-card .tags__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 1rem;
+}
+
+.main .myself-card .tags__item span {
+  display: block;
+  margin-right: 1rem;
+  -webkit-box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+  padding: 5px 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.main .myself-card .tags__item span:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main .myself-card .tags__item span.active {
+  -webkit-box-shadow: inset 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
+          box-shadow: inset 5px 5px 10px #5a5a5a, -5px -5px 10px #ffffff;
 }
 
 .blogs__item {
