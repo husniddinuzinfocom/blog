@@ -339,9 +339,9 @@ body {
   text-align: right;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1025px) {
   .footer__description {
-    text-align: left;
+    text-align: center;
     margin-top: 1rem;
   }
 }
@@ -366,12 +366,6 @@ body {
   text-decoration: none;
   border-radius: 10px;
   font-size: 20px;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 !important;
-  }
 }
 
 .courses {
@@ -651,5 +645,62 @@ body {
 
 .aboutme .mt {
   margin-top: 1rem;
+}
+
+.contact {
+  margin: 2rem 0;
+  margin-top: 7px;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 19px;
+  border-radius: 19px;
+  background: #fff;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.contact:hover {
+  -webkit-box-shadow: 6px 6px 12px #5a5a5a, -6px -6px 12px #ffffff;
+          box-shadow: 6px 6px 12px #5a5a5a, -6px -6px 12px #ffffff;
+}
+
+@media (max-width: 480px) {
+  .contact {
+    -webkit-box-shadow: 6px 6px 12px #5a5a5a, -6px -6px 12px #ffffff;
+            box-shadow: 6px 6px 12px #5a5a5a, -6px -6px 12px #ffffff;
+  }
+}
+
+.contact__img {
+  margin-bottom: 1rem;
+}
+
+.contact__img img {
+  width: auto;
+  height: 80px;
+}
+
+.contact__title {
+  margin: .5rem 0 .3rem 0;
+}
+
+.contact__title h4 {
+  font-size: 18px;
+}
+
+.contact__link a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  font-size: 15px;
+}
+
+.contact__link a:hover {
+  color: #FF5A60;
+}
+
+.contact__link p {
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
