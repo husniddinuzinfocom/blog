@@ -6,7 +6,6 @@ if (barsIcon) {
   function menuOpen() {
     barsIcon.classList.toggle("active");
     menu.classList.toggle("active");
-    console.log("s");
   }
 }
 // mobile menu finished
@@ -33,5 +32,4 @@ if (signInBtn && signUpBtn && logInForm && signTitle) {
     signTitle.textContent = "Регистрация";
   }
 }
-
 // sign in change sign up functions finished

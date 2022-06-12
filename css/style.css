@@ -295,7 +295,7 @@ body {
 }
 
 .bars-icon.active>span:nth-child(2) {
-    transform: translateX(-100%);
+    transform: translateX(-105%);
 }
 
 .bars-icon.active>span:last-child {
