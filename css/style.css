@@ -315,7 +315,7 @@ body {
     text-align: left;
 }
 
-.detail-text-content a{
+.detail-text-content a {
     color: rgba(0, 0, 0, 0.45);
     text-decoration: none;
     font-size: 18px;
@@ -335,7 +335,7 @@ body {
     border-radius: 1rem;
 }
 
-.detail-img-content > img {
+.detail-img-content>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -370,6 +370,7 @@ body {
     flex-flow: column nowrap;
 }
 
+.login-link h4,
 .mail-send-form h4 {
     color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
@@ -379,7 +380,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.mail-send-form > input {
+.mail-send-form>input {
     border: 2px solid #c3c3c3;
     padding: 12px 1rem;
     outline: none;
@@ -387,8 +388,8 @@ body {
     border-radius: 5px;
 }
 
-
-.mail-send-form > button {
+.login-link a,
+.mail-send-form>button {
     margin-top: 1rem;
     display: block;
     padding: 12px 1rem;
@@ -452,7 +453,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-flow:column nowrap;
+    flex-flow: column nowrap;
 }
 
 .comment-form form textarea,
@@ -508,7 +509,7 @@ body {
     margin-right: 1rem;
 }
 
-.comment-img > img {
+.comment-img>img {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -517,7 +518,7 @@ body {
 
 .comment-message h4 {
     font-size: 16px;
-    color: rgba(0,0,0,.9);
+    color: rgba(0, 0, 0, .9);
     letter-spacing: unset;
     margin: 8px 0 6px;
 }
@@ -529,6 +530,95 @@ body {
     color: #373737;
 }
 
+.login-link {
+    background-color: #fff;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.login-link a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 24px;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.login-content {
+    width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.323);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .1);
+}
+
+.login-form>input {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    outline: none;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #c3c3c3;
+}
+
+.login-form button {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fb2b2b;
+    color: #fff;
+    border: 1px solid #fb2b2b;
+}
+
+.sign-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sign-btns button {
+    width: 50%;
+    flex-basis: 50%;
+    padding: 12px 10px;
+    background: #fff;
+    color: #000;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-btns button.active {
+    background: linear-gradient(to right, rgba(170, 68, 177), rgba(240, 66, 155));
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.login-form.active input[name='first-name'],
+.login-form.active input[name='last-name'],
+.login-form.active input[name='email'],
+.login-form.active input[name='confirm-password'] {
+    display: none;
+}
+
 @media (max-width: 540px) {
     .full-img {
         padding-bottom: 1rem;
@@ -538,26 +628,37 @@ body {
     .post-title a {
         font-size: 17px;
     }
+
     .detail {
         padding: 0;
     }
+
     .detail-text-content h2 {
         font-size: 30px;
     }
-    .detail-text-content a{
+
+    .detail-text-content a {
         font-size: 15px;
     }
+
     .detail-img-content {
         height: auto;
     }
+
     .detail-description-text p {
         font-size: 18px;
     }
+
     .detail-description-text {
         padding: 0 16px;
     }
+
     .comment-item {
         padding-left: 1rem !important;
+    }
+
+    .login-content {
+        width: 90%;
     }
 }
 
@@ -624,21 +725,26 @@ body {
         font-size: 19px;
         font-weight: 500;
     }
+
     .detail-description {
         padding: 48px 0;
     }
+
     .mail-send-form {
         margin-top: 1rem;
         padding: 0 20px;
         text-align: center;
     }
-    .mail-send-form > button {
+
+    .mail-send-form>button {
         margin: 0 auto;
         margin-top: 1rem;
     }
-    .mail-send-form > input {
+
+    .mail-send-form>input {
         max-width: 350px;
     }
+
     .similar-posts {
         padding: 4rem 0;
     }
