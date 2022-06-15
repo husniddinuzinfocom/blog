@@ -15,16 +15,19 @@
         <div class="login-content">
             <h4 class="login-title">Регистрация</h4>
             <div class="sign-btns">
-                <button class="signin">Вход</button>
-                <button class="signup active">Регистрация</button>
+                <button class="signin active">Вход</button>
+                <button class="signup">Регистрация</button>
             </div>
-            <form class="login-form">
+            <form class="login-form sign-up-form">
                 <input type="text" name="first-name" placeholder="First Name" />
-                <input type="text" name="last-name" placeholder="Last Name" />
                 <input type="email" name="email" placeholder="Email" />
-                <input type="text" name="user-name" placeholder="Username" />
-                <input type="password" name="password" id="password" placeholder="Password" />
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" />
+                <input type="password" name="password" placeholder="Password" />
+                <button type="submit">Регистрация</button>
+            </form>
+
+            <form class="login-form sign-in-form active">
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
                 <button type="submit">Регистрация</button>
             </form>
         </div>

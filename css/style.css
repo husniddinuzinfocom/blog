@@ -547,6 +547,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    background-color: #f4f6f8;
 }
 
 .login-content {
@@ -613,11 +614,139 @@ body {
     font-size: 20px;
 }
 
-.login-form.active input[name='first-name'],
-.login-form.active input[name='last-name'],
-.login-form.active input[name='email'],
-.login-form.active input[name='confirm-password'] {
+.sign-in-form,
+.sign-up-form {
     display: none;
+}
+
+.sign-up-form.active,
+.sign-in-form.active {
+    display: block;
+}
+
+.courses__item {
+    width: 100%;
+    padding: 60px 25px 60px 25px;
+    box-shadow: 0px -6px 48px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.line {
+    height: 1.5px;
+    background-color: #161c2d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.courses__item__title {
+    text-align: center;
+}
+
+.line__title {
+    height: 1px;
+    background-color: #2b354f;
+    display: inline-block;
+    width: 20px;
+    margin: 15px 0;
+}
+
+.courses__item__title h4 {
+    color: #161c2d;
+    font-family: "Hind", Sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: 0px;
+}
+
+.courses__item__description {
+    text-align: center;
+}
+
+.courses__item__description p {
+    color: #869ab8;
+    font-family: "Roboto", Sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.7em;
+    letter-spacing: 0.3px;
+}
+
+.courses__item.red .line {
+    background-color: red;
+}
+
+.courses__item.red .blue {
+    background-color: #6685dc;
+}
+
+.books__item {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+
+.books__item__img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.books__item__description {
+    margin: 15px 0;
+}
+
+.books__item__description p {
+    color: #161c2d;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.books__item__link {
+    margin-top: 30px;
+}
+
+.books__item__link a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #FF5A60;
+    border-color: #FFFFFF;
+    font-weight: 500;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px 20px 10px 20px;
+    transition: all .2s ease-in-out;
+}
+
+.books__item__link a:hover {
+    background-color: #FF5A60BF;
+}
+
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 1rem 0;
+    padding-top: 7px;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.title-courses h2 {
+    font-family: "encode sans semi condensed", sans-serif;
+    font-size: 42px;
+    font-weight: 600;
 }
 
 @media (max-width: 540px) {

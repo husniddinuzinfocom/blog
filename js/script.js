@@ -13,23 +13,51 @@ if (barsIcon) {
 // sign in change sign up functions started
 const signInBtn = document.querySelector(".signin");
 const signUpBtn = document.querySelector(".signup");
-const logInForm = document.querySelector(".login-form");
+const signUpForm = document.querySelector(".sign-up-form");
+const signInForm = document.querySelector(".sign-in-form");
 const signTitle = document.querySelector(".login-title");
-if (signInBtn && signUpBtn && logInForm && signTitle) {
+if (signInBtn && signUpBtn && signTitle) {
   signInBtn.addEventListener("click", signIn);
   function signIn() {
-    logInForm.classList.add("active");
-    signInBtn.classList.add("active");
+    signUpForm.classList.remove("active");
+    signInForm.classList.add("active");
     signUpBtn.classList.remove("active");
-    signTitle.textContent = "Вход";
+    signInBtn.classList.add("active");
   }
 
   signUpBtn.addEventListener("click", signUp);
   function signUp() {
-    logInForm.classList.remove("active");
-    signInBtn.classList.remove("active");
+    signUpForm.classList.add("active");
+    signInForm.classList.remove("active");
     signUpBtn.classList.add("active");
-    signTitle.textContent = "Регистрация";
+    signInBtn.classList.remove("active");
   }
 }
 // sign in change sign up functions finished
+
+// send email started
+const form = document.querySelector(".mail-send-form");
+if (form) {
+  form.addEventListener("submit", sendMail);
+  async function sendMail(e) {
+    e.preventDefault();
+    const url = "/email";
+    const data = JSON.stringify({
+      email: form.querySelector("input").value,
+      referer: window.location.pathname,
+    });
+    const headers = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: data,
+    };
+    if (form.querySelector("input").value !== "") {
+      const response = fetch(url, headers);
+      await response.then((res) => res.status);
+      form.querySelector("input").value = "";
+    }
+  }
+}
+// send email finished
